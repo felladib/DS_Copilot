@@ -1,4 +1,99 @@
+
+@import "tailwindcss";
+
 :root {
+  /* Couleurs de base */
+  --primary: #7c3aed; /* Violet profond */
+  --primary-light: #a78bfa;
+  --primary-dark: #5b21b6;
+  --secondary: #ec4899; /* Rose vibrant */
+  --accent: #10b981; /* Vert émeraude */
+  --neutral: #64748b;
+  --neutral-light: #e2e8f0;
+  --neutral-dark: #334155;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --border: #e2e8f0;
+
+  /* Sidebar */
+  --sidebar-bg: #f1f5f9;
+  --sidebar-text: #0f172a;
+  --sidebar-hover: #7c3aed;
+  --sidebar-border: #cbd5e1;
+  --sidebar-footer-bg: #e2e8f0;
+  --sidebar-footer-text: #64748b;
+  --sidebar-accent: #7c3aed;
+  --sidebar-icon: #475569;
+  --sidebar-logo-text: #7c3aed;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #7c3aed, #a78bfa);
+  --gradient-accent: linear-gradient(135deg, #10b981, #34d399);
+  --gradient-ai: linear-gradient(135deg, #ec4899, #7c3aed);
+  --gradient-card: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+
+  /* States */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+}
+
+[data-theme="dark"] {
+  /* Couleurs de base (Dark) */
+  --primary: #a78bfa;
+  --primary-light: #c4b5fd;
+  --primary-dark: #7c3aed;
+  --secondary: #f472b6;
+  --accent: #34d399;
+  --neutral: #94a3b8;
+  --neutral-light: #475569;
+  --neutral-dark: #cbd5e1;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --border: #334155;
+
+  /* Sidebar (Dark) */
+  --sidebar-bg: #1e293b;
+  --sidebar-text: #e2e8f0;
+  --sidebar-hover: #a78bfa;
+  --sidebar-border: #334155;
+  --sidebar-footer-bg: #334155;
+  --sidebar-footer-text: #94a3b8;
+  --sidebar-accent: #a78bfa;
+  --sidebar-icon: #94a3b8;
+  --sidebar-logo-text: #a78bfa;
+
+  /* Gradients (Dark) */
+  --gradient-primary: linear-gradient(135deg, #7c3aed, #a78bfa);
+  --gradient-accent: linear-gradient(135deg, #10b981, #34d399);
+  --gradient-ai: linear-gradient(135deg, #ec4899, #7c3aed);
+  --gradient-card: linear-gradient(145deg, #1e293b, #0f172a);
+
+  /* States (Dark) */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+}
+
+
+/* :root {
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #374151;
+  --sidebar-hover: #3b82f6;
+  --sidebar-border: #e5e7eb;
+  --sidebar-footer-bg: #f9fafb;
+  --sidebar-footer-text: #6b7280;
+  --sidebar-accent: #2563eb;
+  --sidebar-icon: #4b5563;
+  --sidebar-logo-text: #2563eb;
+} */
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +160,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

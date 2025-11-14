@@ -1,0 +1,168 @@
+.neo-sidebar {
+  height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  border-right: 1px solid #1e293b;
+  // overflow: hidden;
+  min-width: 72px;
+  
+
+  // LOGO en haut
+  .neo-logo-section {
+    padding: 20px 25px 16px;
+    display: flex;
+    justify-content: flex-start;
+    // border-Bottom : 1px solid #1e293b;
+  }
+
+  .neo-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .neo-logo-icon {
+      font-size: 26px;
+      color: #60a5fa;
+    }
+
+    .neo-title {
+      font-size: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+      color: #f1f5f9;
+    }
+  }
+
+  // MENU
+  .neo-menu {
+    flex: 1;
+    padding: 8px 0;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+     
+      margin: 4px 12px 4px 12px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(96, 165, 250, 0.15);
+        color: #dbeafe;
+      }
+
+      .neo-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+      }
+
+      .neo-text {
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // FOOTER
+  .neo-footer {
+    padding: 16px;
+    border-top: 1px solid #1e293b;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .neo-user,
+    .neo-logout {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #94a3b8;
+    }
+
+    // .neo-user{
+    //   .neo-user-icon {
+    //     border-radius: 50%;
+    //     background: #334155;
+    //     padding: 6px;
+    //     color:red;
+    //   }
+    // }
+    .neo-logout {
+      background: none;
+      border: none;
+      cursor: pointer;
+      // padding: 8px;
+      border-radius: 8px;
+      transition: background 0.2s;
+      width: fit-content;
+
+      &:hover {
+        background: rgba(239, 68, 68, 0.15);
+        color: #fecaca;
+      }
+    }
+
+    .neo-username,
+    .neo-logout-text {
+      font-size: 15px;
+      white-space: nowrap;
+    }
+  }
+
+
+  // TOGGLE FLOTTANT (la petite bulle)
+  .neo-sidebar-toggle {
+    position: absolute;
+    top: 7%;
+    right: -17px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #1e293b;
+    border: 2px solid #334155;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 2000;// au-dessus du sidebar
+    // pointer-events: auto;
+    // overflow: visible;
+
+    .toggle-icon {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &:hover {
+      background: #334155;
+      color: #f1f5f9;
+    }
+  }
+}
