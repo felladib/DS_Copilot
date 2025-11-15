@@ -1,25 +1,24 @@
+// src/components/Sidebar.module.scss
+
 .neo-sidebar {
   height: 100vh;
-  background: #0f172a;
-  color: #e2e8f0;
+  background: var(--color-sidebar-bg);
+  color: var(--color-sidebar-text-primary);
   display: flex;
   flex-direction: column;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
-  border-right: 1px solid #1e293b;
-  // overflow: hidden;
+  box-shadow: 4px 0 20px var(--color-sidebar-shadow);
+  border-right: 1px solid var(--color-sidebar-border);
   min-width: 72px;
-  
 
   // LOGO en haut
   .neo-logo-section {
     padding: 20px 25px 16px;
     display: flex;
     justify-content: flex-start;
-    // border-Bottom : 1px solid #1e293b;
   }
 
   .neo-logo {
@@ -29,14 +28,14 @@
 
     .neo-logo-icon {
       font-size: 26px;
-      color: #60a5fa;
+      color: var(--color-sidebar-text-active);
     }
 
     .neo-title {
       font-size: 18px;
       font-weight: 700;
       white-space: nowrap;
-      color: #f1f5f9;
+      color: var(--color-sidebar-text-primary);
     }
   }
 
@@ -52,8 +51,7 @@
     }
 
     li {
-     
-      margin: 4px 12px 4px 12px;
+      margin: 4px 12px;
     }
 
     a {
@@ -62,13 +60,18 @@
       gap: 16px;
       padding: 10px 16px;
       border-radius: 10px;
-      color: #cbd5e1;
+      color: var(--color-sidebar-text-secondary);
       text-decoration: none;
       transition: all 0.2s ease;
 
       &:hover {
-        background: rgba(96, 165, 250, 0.15);
-        color: #dbeafe;
+        background: var(--color-sidebar-item-bg-active);
+        color: var(--color-sidebar-text-primary);
+      }
+
+      &.active {
+        background: var(--color-sidebar-item-bg-active);
+        color: var(--color-sidebar-text-active);
       }
 
       .neo-icon {
@@ -89,7 +92,7 @@
   // FOOTER
   .neo-footer {
     padding: 16px;
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid var(--color-sidebar-border);
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -99,22 +102,13 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      color: #94a3b8;
+      color: var(--color-sidebar-text-muted);
     }
 
-    // .neo-user{
-    //   .neo-user-icon {
-    //     border-radius: 50%;
-    //     background: #334155;
-    //     padding: 6px;
-    //     color:red;
-    //   }
-    // }
     .neo-logout {
       background: none;
       border: none;
       cursor: pointer;
-      // padding: 8px;
       border-radius: 8px;
       transition: background 0.2s;
       width: fit-content;
@@ -132,8 +126,7 @@
     }
   }
 
-
-  // TOGGLE FLOTTANT (la petite bulle)
+  // TOGGLE FLOTTANT
   .neo-sidebar-toggle {
     position: absolute;
     top: 7%;
@@ -142,17 +135,15 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #1e293b;
-    border: 2px solid #334155;
-    color: #cbd5e1;
+    background: var(--color-sidebar-border);
+    border: 2px solid var(--color-sidebar-item-bg-hover);
+    color: var(--color-sidebar-text-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 2000;// au-dessus du sidebar
-    // pointer-events: auto;
-    // overflow: visible;
+    z-index: 2000;
 
     .toggle-icon {
       font-size: 18px;
@@ -161,8 +152,8 @@
     }
 
     &:hover {
-      background: #334155;
-      color: #f1f5f9;
+      background: var(--color-sidebar-item-bg-hover);
+      color: var(--color-sidebar-text-primary);
     }
   }
 }

@@ -15,7 +15,7 @@ function App() {
       <SidebarProvider>
         <div className="app">
           <Routes>
-            <Route path="/r" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/Settings" element={<Settings />} />
             {/* Tu peux ajouter d'autres routes ici */}
           </Routes>

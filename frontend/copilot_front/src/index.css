@@ -1,14 +1,72 @@
 
 @import "tailwindcss";
 
+
+:root {
+  /* --- Couleurs de base du thème sombre (ton sidebar actuel) --- */
+  --color-bg-primary: #0f172a;         
+  --color-bg-secondary: #1e293b;        
+  --color-bg-accent: rgba(96, 165, 250, 0.15); 
+  --color-bg-card: #334155;          
+
+  --color-text-primary: #f1f5f9;        
+  --color-text-secondary: #cbd5e1;      
+  --color-text-muted: #94a3b8;          
+  --color-text-link: #60a5fa;           
+
+  --color-border: #1e293b;             
+  --color-shadow: rgba(0, 0, 0, 0.4);   
+
+
+  
+  --color-sidebar-bg: #0f172a;
+  --color-sidebar-border: #1e293b;
+  --color-sidebar-item-bg-hover: #334155;
+  --color-sidebar-item-bg-active: rgba(96, 165, 250, 0.15);
+  --color-sidebar-text-primary: #f1f5f9;
+  --color-sidebar-text-secondary: #cbd5e1;
+  --color-sidebar-text-muted: #94a3b8;
+  --color-sidebar-text-active: #60a5fa;
+  --color-sidebar-shadow: rgba(0, 0, 0, 0.4);
+
+  /* --- Autres utilitaires --- */
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Optionnel : mode clair (tu pourras l’activer plus tard) */
+[data-theme="light"] {
+  --color-bg-primary: #f8fafc;
+  --color-bg-secondary: #e2e8f0;
+  --color-bg-accent: rgba(37, 99, 235, 0.1);
+  --color-bg-card: #ffffff;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748b;
+  --color-text-link: #2563eb;
+
+  --color-border: #cbd5e1;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+
+
+}
+
+
+/* 
 :root {
   /* Couleurs de base */
-  --primary: #7c3aed; /* Violet profond */
-  --primary-light: #a78bfa;
-  --primary-dark: #5b21b6;
-  --secondary: #ec4899; /* Rose vibrant */
-  --accent: #10b981; /* Vert émeraude */
-  --neutral: #64748b;
+  /* --primary: #7c3aed; Violet profond */
+  /* --primary-light: #a78bfa;
+  --primary-dark: #5b21b6; */
+  /* --secondary: #ec4899; Rose vibrant */
+  /* --accent: #10b981; Vert émeraude */
+  /* --neutral: #64748b;
   --neutral-light: #e2e8f0;
   --neutral-dark: #334155;
   --text-primary: #0f172a;
@@ -16,10 +74,10 @@
   --text-muted: #94a3b8;
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
-  --border: #e2e8f0;
+  --border: #e2e8f0; */
 
   /* Sidebar */
-  --sidebar-bg: #f1f5f9;
+  /* --sidebar-bg: #f1f5f9;
   --sidebar-text: #0f172a;
   --sidebar-hover: #7c3aed;
   --sidebar-border: #cbd5e1;
@@ -27,23 +85,23 @@
   --sidebar-footer-text: #64748b;
   --sidebar-accent: #7c3aed;
   --sidebar-icon: #475569;
-  --sidebar-logo-text: #7c3aed;
+  --sidebar-logo-text: #7c3aed; */
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #7c3aed, #a78bfa);
+  /* --gradient-primary: linear-gradient(135deg, #7c3aed, #a78bfa);
   --gradient-accent: linear-gradient(135deg, #10b981, #34d399);
   --gradient-ai: linear-gradient(135deg, #ec4899, #7c3aed);
-  --gradient-card: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+  --gradient-card: linear-gradient(145deg, #f1f5f9, #e2e8f0); */
 
   /* States */
-  --success: #10b981;
+  /* --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
-}
+} */
 
-[data-theme="dark"] {
+/* [data-theme="dark"] { */
   /* Couleurs de base (Dark) */
-  --primary: #a78bfa;
+  /* --primary: #a78bfa;
   --primary-light: #c4b5fd;
   --primary-dark: #7c3aed;
   --secondary: #f472b6;
@@ -56,10 +114,10 @@
   --text-muted: #64748b;
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
-  --border: #334155;
+  --border: #334155; */
 
   /* Sidebar (Dark) */
-  --sidebar-bg: #1e293b;
+  /* --sidebar-bg: #1e293b;
   --sidebar-text: #e2e8f0;
   --sidebar-hover: #a78bfa;
   --sidebar-border: #334155;
@@ -67,19 +125,19 @@
   --sidebar-footer-text: #94a3b8;
   --sidebar-accent: #a78bfa;
   --sidebar-icon: #94a3b8;
-  --sidebar-logo-text: #a78bfa;
+  --sidebar-logo-text: #a78bfa; */
 
   /* Gradients (Dark) */
-  --gradient-primary: linear-gradient(135deg, #7c3aed, #a78bfa);
+  /* --gradient-primary: linear-gradient(135deg, #7c3aed, #a78bfa);
   --gradient-accent: linear-gradient(135deg, #10b981, #34d399);
   --gradient-ai: linear-gradient(135deg, #ec4899, #7c3aed);
-  --gradient-card: linear-gradient(145deg, #1e293b, #0f172a);
+  --gradient-card: linear-gradient(145deg, #1e293b, #0f172a); */
 
   /* States (Dark) */
-  --success: #34d399;
+  /* --success: #34d399;
   --warning: #fbbf24;
   --error: #f87171;
-}
+}  */
 
 
 /* :root {
